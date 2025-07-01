@@ -1,0 +1,20 @@
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    image_url VARCHAR(511) NOT NULL,
+    preis_pro_monat FLOAT NOT NULL,
+    kategorie VARCHAR(50),
+    kilometerstand FLOAT,
+    getriebe VARCHAR(50),
+    kraftstoff VARCHAR(50),
+    leistung_in_kw VARCHAR(50),
+    sitzplaetze INT,
+    tueren INT,
+    hubraum_in_cm3 FLOAT,
+    gaenge INT,
+    zylinder INT,
+    leergewicht_in_kg FLOAT,
+    latitude FLOAT,
+    longitude FLOAT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
