@@ -87,3 +87,20 @@ Dieses Projekt wurde vor Beginn meines Informatikstudiums erstellt, um praktisch
 
 Lizenz
 Dieses Projekt ist frei nutzbar und kann beliebig erweitert werden.
+
+
+## SQL-Dateien
+
+Im Ordner [`sql/`](sql/) findest du die SQL-Dateien zur Datenbank:
+
+- `1_create_nutzer.sql`
+- `2_create_produkte.sql`
+- `3_create_bestellungen.sql`
+- `4_insert_demo_daten.sql`
+
+### Anleitung (Import in phpMyAdmin):
+
+1. Öffne `http://localhost/phpmyadmin`
+2. Neue Datenbank: `vanguard_rentals`
+3. Importiere die 4 Dateien nacheinander
+
