@@ -47,26 +47,26 @@ Dieses Projekt implementiert mehrere grundlegende Sicherheitsmaßnahmen:
 ```sql
 CREATE DATABASE vanguard_rentals;
 
-CREATE TABLE nutzer (
+CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   email VARCHAR(255) UNIQUE NOT NULL,
-  passwort VARCHAR(255) NOT NULL
+  password VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE produkte (
+CREATE TABLE products (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255),
-  beschreibung TEXT,
-  preis DECIMAL(10,2)
+  description TEXT,
+  price DECIMAL(10,2)
 );
 
-CREATE TABLE bestellungen (
+CREATE TABLE orders (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  nutzer_id INT,
-  produkt_id INT,
-  datum DATETIME,
-  FOREIGN KEY (nutzer_id) REFERENCES nutzer(id),
-  FOREIGN KEY (produkt_id) REFERENCES produkte(id)
+  user_id INT,
+  product_id INT,
+  date DATETIME,
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (product_id) REFERENCES products(id)
 );
 ```
 
