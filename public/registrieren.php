@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pass = $_POST['password'] ?? '';
 
     $hash = password_hash($pass, PASSWORD_DEFAULT);
-    $sql = "INSERT INTO nutzer (email, passwort) VALUES (?, ?)";
+    $sql = "INSERT INTO user (email, password) VALUES (?, ?)";
 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $email, $hash);
